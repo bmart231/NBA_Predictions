@@ -3,7 +3,7 @@ from __future__ import annotations
 import time
 from pathlib import Path
 
-import pandas as pd
+import pandas as pd 
 from tqdm import tqdm
 
 from nba_api.stats.static import players
