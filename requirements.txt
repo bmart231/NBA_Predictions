@@ -1,0 +1,9 @@
+nba_api
+pandas
+numpy
+tqdm
+pyarrow
+scikit-learn
+scipy
+joblib
+python-dotenv
