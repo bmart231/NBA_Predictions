@@ -10,9 +10,9 @@ from nba_api.stats.static import players
 from nba_api.stats.endpoints import playergamelog
 
 
-seasons = ["2023-24", "2024-25"]
+seasons = ["2023-24", "2024-25", "2025-26"]
 sleep_time = 0.8
-output_dir = Path("data/raw/player_gamelogs.parquet")
+output_dir = Path("data/raw/player_gamelogs_2023_2026.parquet")
 
 
 def fetch_player_gamelogs(player_id: int, season: str) -> pd.DataFrame:
