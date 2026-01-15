@@ -3,8 +3,9 @@ from __future__ import annotations
 from pathlib import Path
 import pandas as pd
 
-raw_gamelogs_path = Path("data/raw/player_gamelogs.parquet")
-processed_features_path = Path("data/processed/player_features.parquet")
+raw_gamelogs_path = Path("data/raw/player_gamelogs_2023_2026.parquet")
+processed_features_path = Path("data/processed/player_features_2023_2026.parquet")
+
 
 rolling_window = [5, 10, 20]  # rolling averages over last 5, 10, 20 games
 

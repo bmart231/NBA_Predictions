@@ -7,7 +7,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import TimeSeriesSplit
 from sklearn.metrics import mean_absolute_error
 
-data_path = Path("data/processed/player_features.parquet")
+data_path = Path("data/processed/player_features_2023_2026.parquet")
 model_path = Path("models")
 
 n_splits = 5  # number of folds for cross-validation
