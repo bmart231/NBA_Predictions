@@ -8,7 +8,7 @@ import joblib
 
 import argparse
 
-features_path = Path("data/processed/player_features.parquet")
+features_path = Path("data/processed/player_features_2023_2026.parquet")
 model_path = Path("models")
 
 # standard normal cumulative distribution function
@@ -68,6 +68,10 @@ def main() -> None:
     df = pd.read_parquet(features_path)
     df["GAME_DATE"] = pd.to_datetime(df["GAME_DATE"])
     df["PLAYER_NAME"] = df["PLAYER_NAME"].astype(str)
+    
+    # to filter to current season only
+    # df = df[df["SEASON"] == "2025-26"].copy() doesn't work yet bruh 
+
 
     row = latest_features_for_players(df, player_name=args.player)
 
