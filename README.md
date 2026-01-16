@@ -33,3 +33,5 @@ You'll be prompted to enter:
 - **Under Odds** (e.g., -110)
 
 > **Note:** If player data is unavailable, a warning will be displayed.
+
+> > **Note:** More data (AST, MIN, STL coming soon)
