@@ -16,11 +16,10 @@ python -m pip install -U pip
 python -m pip install -r requirements.txt
 ```
 
-# Running the Model
+# Running
 
 ```bash
-python -m src.model.predict_props // running in terminal
-python -m src.ui.app // running gui
+python -m src.ui.app
 ```
 
 # Input Format
