@@ -19,7 +19,8 @@ python -m pip install -r requirements.txt
 # Running the Model
 
 ```bash
-python -m src.model.predict_props
+python -m src.model.predict_props // running in terminal
+python -m src.ui.app // running gui
 ```
 
 # Input Format
