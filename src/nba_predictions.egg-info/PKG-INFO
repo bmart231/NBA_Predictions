@@ -1,0 +1,52 @@
+Metadata-Version: 2.4
+Name: nba-predictions
+Version: 0.1.0
+Summary: NBA player prop predictions using nba_api + ML
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: joblib
+Requires-Dist: tqdm
+Requires-Dist: nba_api
+Requires-Dist: pyarrow
+
+# Setup
+
+## Windows (PowerShell)
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+python -m pip install -U pip
+python -m pip install -r requirements.txt
+```
+
+## macOS/Linux
+
+```bash
+source .venv/bin/activate
+python -m pip install -U pip
+python -m pip install -r requirements.txt
+```
+
+# Running
+
+```bash
+python -m src.ui.app
+```
+
+# Input Format
+
+You'll be prompted to enter:
+
+- **Player Name** (e.g., LeBron James)
+- **Points Line** (e.g., 27.5)
+- **Rebounds Line** (e.g., 7.5)
+- **Over Odds** (e.g., -110)
+- **Under Odds** (e.g., -110)
+
+> **Note:** If player data is unavailable, a warning will be displayed.
+
+> > **Note:** More data (AST, MIN, STL coming soon)

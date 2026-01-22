@@ -8,6 +8,13 @@ python -m pip install -U pip
 python -m pip install -r requirements.txt
 ```
 
+## Install (venv for isolated install)
+
+```bash
+python -m venv .venv && source .venv/bin/activate
+python -m pip install "git+https://github.com/bmart231/NBA_Predictions.git"
+```
+
 ## macOS/Linux
 
 ```bash
@@ -20,6 +27,12 @@ python -m pip install -r requirements.txt
 
 ```bash
 python -m src.ui.app
+```
+
+## Running log
+
+```bash
+nba-ui
 ```
 
 # Input Format

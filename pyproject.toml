@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nba-predictions"
+version = "0.1.0"
+description = "NBA player prop predictions using nba_api + ML"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas",
+  "numpy",
+  "scipy",
+  "scikit-learn",
+  "joblib",
+  "tqdm",
+  "nba_api",
+  "pyarrow",
+  "pyside6",
+]
+
+[project.scripts]
+nba-pull-gamelogs   = "src.ingest.pull_player_gamelogs:main"
+nba-build-features  = "src.features.build_features:main"
+nba-train           = "src.model.train_means:main"
+nba-predict         = "src.model.predict_props:main"
+nba-ui            = "src.ui.app:main"

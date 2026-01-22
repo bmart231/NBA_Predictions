@@ -1,0 +1,5 @@
+[console_scripts]
+nba-build-features = src.features.build_features:main
+nba-predict = src.model.predict_props:main
+nba-pull-gamelogs = src.ingest.pull_player_gamelogs:main
+nba-train = src.model.train_means:main
