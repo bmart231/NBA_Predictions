@@ -93,8 +93,10 @@ class App(QWidget):
             if not player: 
                 raise ValueError("Player name cannot be empty.")
             
+            # optional season input
             season = self.season_input.text().strip() or None
             
+            # results from the prediction function
             res = run_prediction(
                 features_path=features_path, # path to processed features
                 model_path=model_path, # path to trained models
@@ -106,7 +108,8 @@ class App(QWidget):
                     under_odds=float(self.under_odds.value()),
                     season=season,
             )
-            
+            BOLD = '\033[1m'
+            END = '\033[0m'
             lines = []
             lines.append(f"Player: {res.player_name}")
             lines.append(f"Latest game date: {res.game_date.date()}")
@@ -125,6 +128,7 @@ class App(QWidget):
             lines.append(f"  P(Over): {res.p_over_reb:.3f}   P(Under): {res.p_under_reb:.3f}")
             lines.append(f"  Fair odds Over: {res.fair_over_reb:+d}   Under: {res.fair_under_reb:+d}")
             lines.append(f"  EV Over: {res.ev_over_reb:+.3f} per $1   EV Under: {res.ev_under_reb:+.3f} per $1")
+            
 
 
             
