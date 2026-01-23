@@ -1,4 +1,10 @@
-# Setup
+# NBA Predictions
+
+NBA player prop predictions using `nba_api` and machine learning, with an interactive desktop GUI.
+
+The app allows you to input player lines and betting odds, then generates model-based predictions using previous season data.
+
+---
 
 ## Windows (PowerShell)
 
@@ -8,12 +14,16 @@ python -m pip install -U pip
 python -m pip install -r requirements.txt
 ```
 
-## Install (venv for isolated install)
+---
+
+## Install (venv for isolated instal(recommened))
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
 python -m pip install "git+https://github.com/bmart231/NBA_Predictions.git"
 ```
+
+---
 
 ## macOS/Linux
 
@@ -23,17 +33,23 @@ python -m pip install -U pip
 python -m pip install -r requirements.txt
 ```
 
-# Running
+---
+
+## Running
 
 ```bash
 python -m src.ui.app
 ```
+
+---
 
 ## Running log
 
 ```bash
 nba-ui
 ```
+
+---
 
 # Input Format
 
