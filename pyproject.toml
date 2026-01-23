@@ -1,14 +1,20 @@
-[build-system]
+[build-system] # PEP 517 build system specification
 requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
+# setup tools configuration
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+# project metadata
 [project]
-name = "nba-predictions"
-version = "0.1.0"
+name = "nba-predictions" # name of the project
+version = "0.1.0" # current version
 description = "NBA player prop predictions using nba_api + ML"
 readme = "README.md"
-requires-python = ">=3.10"
-dependencies = [
+requires-python = ">=3.10" # minimum Python version
+dependencies = [ # package dependencies
   "pandas",
   "numpy",
   "scipy",
@@ -20,6 +26,7 @@ dependencies = [
   "pyside6",
 ]
 
+# scripts used to run   
 [project.scripts]
 nba-pull-gamelogs   = "src.ingest.pull_player_gamelogs:main"
 nba-build-features  = "src.features.build_features:main"
